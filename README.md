@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-# MyNewPortfolio
-New portfolio
-=======
-<<<<<<< HEAD
-# MyNewPortfolio
-New portfolio
-=======
+
 <<<<<<< HEAD
 # MyNewPortfolio
 New portfolio
