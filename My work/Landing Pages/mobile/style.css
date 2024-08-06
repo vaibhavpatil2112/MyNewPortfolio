@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.407);
+  height: 100vh;
+}
+.sec {
+  display: flex;
+}
+.leftone {
+  margin: 5rem 3rem 3rem 9rem;
+}
+.blue{
+  color: rgb(255, 0, 217);
+}
+.navbar{
+  display: flex;
+  margin-left: 8rem;
+}
+.img{
+  width: 100px;
+  height: 35px;
+  margin-top: 2.5rem;
+  cursor: pointer;
+}
+.nav{
+  display: flex;
+  margin: 1rem;
+  padding: .5rem;
+}
+.nav-item{
+  padding: .5rem;
+  margin: 1rem;
+  list-style: none;
+  
+}
+ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+ul li a:hover{
+  text-decoration: underline;
+}
+
+.search-input{
+  height: 30px;
+  width: 250px;
+  margin-top: 1.2rem;
+}
+#search-icon{
+  margin: .8rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-left: 15rem;
+
+}
+#search-icon:hover{
+  background-color:rgba(145, 104, 60, 0.164) ;
+  transform: scale(1.2);
+}
+
+.bars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.fa-brands {
+  font-size: 1.6rem;
+  margin: .5rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 50%;
+  color: black;
+}
+.fa-brands:hover {
+  background-color: rgba(145, 104, 60, 0.342);
+  box-shadow: 0 .5rem 1rem black;
+  transform: scale(1.2);
+
+}
+h1 {
+  font-size: 2.4rem;
+  font-family: sans-serif;
+}
+p {
+  font-size: 1.6;
+  margin: 1.5rem;
+  color: rgb(39, 35, 35);
+  font-family: serif;
+}
+.rightone {
+  margin: 1rem 15rem 1rem 1rem;
+}
+img {
+  width: 500px;
+  height: 500px;
+}
+.btn {
+  margin: 1.5rem;
+  padding: 0.7rem;
+  text-decoration: none;
+  background-color: rgb(10, 232, 10);
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  width: 260px;
+  position: relative;
+  transition: all 2s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.5s;
+}
+.btn:hover::before {
+  transform: translateX(100%) rotate(45deg);
+}

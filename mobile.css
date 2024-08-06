@@ -1,0 +1,565 @@
+/* ====================================================------- Media Queries --------================================================ */
+@media (max-width: 1040px) {
+  .hamburger-menu {
+    display: grid;
+  }
+
+  .scrollToTop-btn i {
+    font-size: 2rem;
+    padding: 0.8rem 1.7rem;
+  }
+
+  header {
+    padding: 12px 20px;
+  }
+
+  header.sticky {
+    padding: 5px 20px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  header .navigation.active {
+    z-index: 888;
+    position: fixed;
+    background: rgba(26, 25, 25, 0.979);
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    transition: all 3s ease;
+  }
+
+  header .navigation a {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin: 39px;
+    padding: 0 20px;
+    border-radius: 20px;
+  }
+
+  header .navigation a:hover {
+    color: var(--maincolor);
+  }
+
+  header .brand {
+    font-size: 2rem;
+  }
+
+  .menu-btn {
+    position: absolute;
+    background: url(images/menu.png) no-repeat;
+    background-size: 60px;
+    background-position: center;
+    width: 70px;
+    height: 50px;
+    right: 0;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+    z-index: 999;
+    background: url(images/close.png) no-repeat;
+    background-size: 50px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
+
+  section {
+    padding: 90px 50px;
+  }
+  .main {
+    z-index: -50;
+  }
+
+  .main .content h2 span {
+    font-size: 5rem;
+  }
+
+  .main .content h2 {
+    font-size: 2em;
+  }
+
+  .animated-text h3 {
+    font-size: 3em;
+  }
+
+  .title h2 {
+    font-size: 4rem;
+    border-bottom: 3px solid var(--text-color);
+  }
+
+  .about .content {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .about .content .column {
+    position: relative;
+    width: 100%;
+  }
+
+  .about-info {
+    margin-top: 2rem;
+    justify-content: space-around !important;
+  }
+
+  .about .content .col-left .img-card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 100%;
+  }
+
+  .about .content .col-left .img-card {
+    height: 70vh;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+
+  .about .content .col-right {
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    padding: 35px 40px;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .media-icons a {
+    color: var(--text-color);
+    font-size: 2em;
+    margin-right: 40px;
+  }
+
+  .work .image-container .image {
+    margin: 1rem;
+  }
+
+  .work .controls {
+    margin: 1rem 0rem 0.5rem 0rem;
+  }
+
+  .timeline {
+    width: 70%;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .quali {
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  .skills .skill .skill-sec .skill-list img {
+    width: 6rem;
+    margin: 1rem 2rem;
+  }
+
+  .skills .content .skill {
+    padding: 0rem 4rem;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 130%;
+    margin-left: -6rem;
+  }
+  .contact .right-contact .input-control input,
+  .contact .right-contact .input-control textarea {
+    padding: 0.8rem 1.1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .scrollToTop-btn i {
+    font-size: 3rem;
+    padding: 0.6rem 1.4rem;
+  }
+
+  section {
+    padding: 80px 40px !important;
+  }
+
+  .title h2 {
+    font-size: 3rem;
+  }
+
+  .main .content {
+    max-width: 650px;
+    padding: 1rem;
+  }
+
+  .main .content h2 span {
+    font-size: 4rem;
+  }
+
+  .main .content h2 {
+    font-size: 1.7em;
+    line-height: 3em;
+  }
+
+  header .navigation.active {
+    width: 60%;
+  }
+
+  header .brand {
+    font-size: 3rem;
+  }
+
+  header .navigation a {
+    font-size: 1.4rem;
+  }
+
+  .menu-btn {
+    background-size: 50px;
+    width: 60px;
+    height: 40px;
+  }
+
+  .menu-btn.active {
+    background-size: 40px;
+  }
+
+  .animated-text h3 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.5em;
+    margin-bottom: 0em !important;
+  }
+
+  .main .image img {
+    width: 8em;
+    margin-left: 0.5em;
+    border-radius: 10px;
+  }
+
+  .media-icons a {
+    /* color: var(--text-color); */
+    font-size: 2rem;
+    margin-right: 50px;
+  }
+
+  .media-icons {
+    margin-top: 40px;
+  }
+
+  .about .content {
+    position: relative;
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 3rem;
+  }
+
+  .about .content .img-card img {
+    width: 100% !important;
+  }
+
+  .work .work-items a li {
+    font-size: 1.3em;
+  }
+
+  .contact-container {
+    width: 70%;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px 25px;
+  }
+
+  .timeline {
+    width: 90%;
+    margin-top: 2rem !important;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .quali {
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  .skills .skill .skill-sec .skill-list {
+    padding: 2rem 0rem 0rem 0rem;
+  }
+}
+
+@media (max-width: 650px) {
+  section {
+    padding: 60px 25px !important;
+  }
+
+  .title h2 {
+    font-size: 3rem;
+  }
+
+  .main .content h2 span {
+    font-size: 5rem;
+  }
+
+  header {
+    padding: 5px 20px;
+  }
+
+  header.sticky {
+    padding: 3px 20px;
+  }
+
+  .menu-btn.active {
+    background-size: 30px;
+  }
+
+  .menu-btn {
+    background-size: 40px;
+    width: 50px;
+    height: 30px;
+  }
+
+  header .navigation a {
+    font-size: 1.5rem;
+    margin: 28px;
+  }
+
+  header .brand {
+    font-size: 3rem;
+  }
+
+  .scrollToTop-btn {
+    right: 15px !important;
+    bottom: 10px !important;
+  }
+
+  .scrollToTop-btn i {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .main .content {
+    max-width: 450px;
+    padding: 1rem;
+  }
+
+  .animated-text h3 {
+    font-size: 2rem;
+  }
+
+  .main .content h2 {
+    font-size: 1.5rem;
+    line-height: 4rem;
+  }
+
+  .media-icons a {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-right: 50px;
+  }
+
+  .work .controls .buttons {
+    margin: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+  }
+
+  .about-info {
+    justify-content: flex-start !important;
+  }
+
+  .timeline {
+    width: 90%;
+    padding: 2rem 2rem;
+  }
+
+  .skills .content .skill {
+    padding: 0rem 2rem;
+  }
+
+  .skills .skill .skill-sec {
+    padding: 1rem 0rem;
+  }
+
+  .skills .skill .skill-sec .skill-list img {
+    width: 5rem;
+    margin: 1rem;
+  }
+ 
+  .contact-container {
+    width: 70%;
+  }
+  .contact {
+    width: 100%;
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .title h2 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--text-color);
+  }
+
+  .about .content {
+    margin-top: 0rem;
+  }
+
+  section {
+    padding: 36px 10px !important;
+  }
+
+  .scrollToTop-btn {
+    right: 10px !important;
+    bottom: 3px !important;
+  }
+
+  .scrollToTop-btn i {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  header .navigation.active {
+    width: 70%;
+  }
+
+  .menu-btn {
+    margin: 0 11px;
+    background-size: 31px;
+    width: 40px;
+    height: 24px;
+  }
+
+  .menu-btn.active {
+    background-size: 25px;
+  }
+
+  .main .content h2 {
+    font-size: 1em;
+    line-height: 3em;
+  }
+
+  header .brand {
+    font-size: 2rem;
+  }
+
+  header .navigation a {
+    font-size: 1.4rem;
+    margin: 20px;
+  }
+
+  .main .content h2 span {
+    font-size: 3.5rem;
+  }
+
+  .animated-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .main .content {
+    padding: 0rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .about .content .col-right {
+    padding: 0rem 1rem;
+  }
+
+  .about-info h4,
+  .about p {
+    font-size: 0.9rem !important;
+  }
+
+  .media-icons a {
+    font-size: 2rem;
+  }
+
+  .about .content .col-left .img-card {
+    margin-top: 2rem;
+  }
+
+  .footer {
+    padding: 2rem 1em;
+  }
+
+  .timeline {
+    padding: 1.5rem 1rem;
+  }
+
+  .timeline .timeline_item {
+    padding: 0rem 0rem 1rem 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .timeline .timeline_item h1 {
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+    padding-top: 15px;
+  }
+
+  .timeline .timeline_item p {
+    font-size: 0.9rem;
+  }
+
+  .timeline .timeline_item h3 {
+    font-size: 1rem;
+  }
+
+  .skills .content .skill {
+    padding: 0rem 1rem;
+  }
+  .skills .skill .skill-sec .skill-list {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .skills .skill .skill-sec .skill-list img {
+    width: 4rem;
+    margin: 0.5rem;
+  }
+  .skills .skill .skill-sec h1 {
+    font-size: 1.5rem;
+  }
+  .section-title span {
+    font-size: 3rem;
+  }
+  .contact-form {
+    width: 180%;
+  }
+  .contact-container {
+    width: 80%;
+  }
+  .contact {
+    width: 100%;
+    margin-left: -3rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .menu-btn {
+    margin: 0 7px;
+  }
+
+  header {
+    padding: 5px 4px;
+  }
+
+  header.sticky {
+    padding: 0 7px;
+  }
+}

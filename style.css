@@ -1,0 +1,939 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Aladin&family=Bebas+Neue&family=Fredoka+One&family=Kaushan+Script&family=Monoton&family=Pacifico&family=Pattaya&family=Roboto:ital,wght@1,900&family=Suez+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bgcolor: #000000;
+  --bgcolor2: #fff;
+  --seccolor: #5a5c5b;
+  --maincolor: #01b3ff;
+  --second: #09000e;
+  --third: #380202;
+  --body-bg: #181616;
+  --box-bg: #221f1f;
+  --text-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0.3em;
+  border-radius: 20px;
+  background-color: var(--maincolor);
+}
+
+section {
+  padding: 50px 80px 0px 80px;
+}
+
+.hamburger-menu {
+  --size: 30px;
+  height: var(--size);
+  width: var(--size);
+  cursor: pointer;
+  z-index: 101;
+  position: relative;
+  display: none;
+  align-items: center;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: var(--size);
+  height: 3px;
+  border-radius: 0.5rem;
+  background-color: var(--text-color);
+  transition: 0.4s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  bottom: -10px;
+}
+
+.hamburger-menu.active .hamburger {
+  background-color: transparent;
+}
+
+.hamburger-menu.active .hamburger::before {
+  transform-origin: top left;
+  transform: rotate(45deg);
+  left: 6px;
+  background-color: var(--maincolor);
+}
+
+.hamburger-menu.active .hamburger::after {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  left: 6px;
+}
+
+/*
+  ==============================================================------ header section -----==========================================
+*/
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+header.sticky {
+  background: var(--bgcolor);
+  padding: 5px 40px;
+  box-shadow: 0px 0px 5px #ffffff62;
+}
+
+header .brand {
+  color: var(--maincolor);
+  font-size: 2.3em;
+  font-family: "Fredoka One", cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .brand span {
+  color: rgb(149, 149, 149);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: "Fredoka One", cursive;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation a {
+  color: var(--text-color);
+  font-size: 1.3em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+header .navigation a::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  background: var(--maincolor);
+  position: absolute;
+  bottom: -3px;
+  transition: 0.8s;
+}
+
+header .navigation a:hover::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+}
+
+header .navigation a.active {
+  color: var(--maincolor) !important;
+  border-bottom: 3px solid var(--text-color);
+}
+
+body {
+  min-height: 110vh;
+  background: #000000f4;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title h2 {
+  position: relative;
+  color: var(--maincolor);
+  font-size: 3.5em;
+  width: 90%;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 60px;
+  border-bottom: 3px solid var(--text-color);
+}
+
+.title h2 span {
+  text-align: center;
+  font-family: "Aladin";
+}
+
+/*
+   ====================================================------  main section -------===================================================
+*/
+
+.bgAnimation {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background-color: #000000;
+  filter: saturate(2);
+  overflow: hidden;
+  z-index: -2000;
+  border-radius: 200% 30% 80% 10%;
+}
+.colorBox {
+  z-index: 3;
+  filter: brightness(1);
+  transition: 2s ease;
+  position: relative;
+  margin: 2px;
+  border-radius: 30%;
+  background: #000000;
+}
+.colorBox:hover {
+  background: #4b99e151;
+  transition-duration: 0s;
+}
+.backgroungAn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background: #75d1f919;
+  filter: blur(60px);
+  animation: anim 6s linear infinite;
+}
+@keyframes anim {
+  0% {
+    top: -150px;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 10000;
+}
+
+.main .content {
+  max-width: 800px;
+}
+
+.main .content h2 {
+  color: var(--text-color);
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.main .content strong {
+  font-size: 1.8em;
+  letter-spacing: 5px;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+b {
+  color: var(--maincolor);
+  font-family: "Fredoka One", cursive;
+}
+
+.main .content h2 span {
+  font-size: 2.8em;
+  font-family: "Fredoka One", cursive;
+  background: linear-gradient(
+    270deg,
+    #df8908 10%,
+    rgb(227, 45, 76) 60%,
+    #b415ff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animated-text {
+  position: relative;
+  height: 70px;
+  overflow: hidden;
+}
+
+.animated-text h3 {
+  color: var(--maincolor);
+  font-size: 2.4em;
+  font-weight: 100;
+  font-family: "Fredoka One", cursive;
+  line-height: 70px;
+  letter-spacing: 1px;
+}
+
+.animated-text h3:nth-child(1) {
+  animation: text-move 10s infinite;
+}
+
+@keyframes text-move {
+  0% {
+    margin-top: 0;
+  }
+
+  25% {
+    margin-top: -70px;
+  }
+
+  50% {
+    margin-top: -140px;
+  }
+
+  75% {
+    margin-top: -200px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+.btn {
+  color: var(--second);
+  background: var(--maincolor);
+  font-size: 1em;
+  width: 200px;
+  font-weight: 800;
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  margin-top: 30px;
+  transition: 0.5s ease;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70%;
+  width: 100%;
+  background: var(--bgcolor);
+  transform: translateX(-100%) rotate(45deg);
+  transition: 0.5s ease;
+}
+.btn:hover::before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+.btn:hover {
+  background: var(--bgcolor2);
+  color: var(--bgcolor);
+}
+
+.media-icons {
+  margin-top: 50px;
+}
+
+.media-icons a {
+  color: var(--text-color);
+  font-size: 2em;
+  margin-right: 40px;
+}
+
+.media-icons a i:hover {
+  color: var(--maincolor);
+  transition: 0.5s ease;
+}
+
+/*
+  =======================================================------ About section ------===============================================
+*/
+
+.about .content {
+  position: relative;
+  width: 100%;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.about .content .col-left {
+  position: relative;
+  width: auto;
+  margin-right: 9rem;
+}
+
+.about .content .col-right {
+  position: relative;
+  width: 100%;
+}
+
+.about .content .about-info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about .content .about-info h4 {
+  padding-right: 0.5rem;
+}
+
+.about .content .about-info .about-info-left div,
+.about .content .about-info .about-info-right div {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #666;
+  width: 350px;
+}
+
+.about .content .col-left .img-card {
+  position: relative;
+  display: flex;
+  box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  animation: animate 6s ease-in-out infinite 1s;
+}
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.about .content .col-left .img-card img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 20vw;
+  height: 45vh;
+}
+
+.about .content .col-right .content-title {
+  font-size: 2em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.about .content .col-right .paragraph-text {
+  font-size: 1em;
+}
+.about .content .col-right .paragraph-text a {
+  font-size: 1em;
+  color: var(--maincolor);
+}
+
+/* <!-- =====================================================------ Qualification Section work ex -------=================================== --> */
+
+.timeline {
+  background: #17171b;
+  margin-bottom: 2rem !important;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  width: 60%;
+  position: relative;
+  padding: 3rem 5rem;
+}
+
+.timeline .timeline_item {
+  background: #17171b;
+  border-left: 2px solid var(--maincolor);
+  position: relative;
+  padding: 0rem 0rem 1rem 2rem;
+  padding-bottom: 1rem;
+}
+
+.timeline .timeline_item::after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  display: block;
+  top: 1.5rem;
+  position: absolute;
+  left: -9px;
+  content: "";
+  border: 2px solid var(--maincolor);
+  background: var(--maincolor);
+}
+
+.timeline .timeline_item h1 {
+  color: var(--maincolor);
+  font-size: 1.5rem;
+  font-weight: lighter;
+  padding-bottom: 0.5rem;
+  padding-top: 15px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  font-family: "Oswald", sans-serif;
+}
+
+.timeline .timeline_item p {
+  font-size: 16px;
+  color: var(--text-color);
+  background: #17171b;
+  padding: 0.3rem 0rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.timeline .timeline_item h3 {
+  color: var(--text-color);
+  font-weight: 400;
+  padding: 0.3rem 0rem;
+}
+.timeline a {
+  color: var(--maincolor);
+  transition: all 0.5s ease-out;
+}
+
+.quali {
+  background: #17171b;
+  margin: 0 auto;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+  padding: 2rem 3rem;
+  margin-left: 2rem;
+}
+
+.quali .item {
+  border-left: 2px solid var(--maincolor);
+  position: relative;
+  padding: 0rem 0rem 0.5rem 1rem;
+  padding-bottom: 0.4rem;
+}
+
+.quali .item::after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  display: block;
+  top: 1.5rem;
+  position: absolute;
+  left: -9px;
+  content: "";
+  border: 2px solid var(--maincolor);
+  background: var(--maincolor);
+}
+
+.quali .item h1 {
+  color: var(--maincolor);
+  font-size: 1.5rem;
+  font-weight: lighter;
+  padding-bottom: 0.5rem;
+  padding-top: 15px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  font-family: "Oswald", sans-serif;
+}
+
+.quali .item p {
+  font-size: 16px;
+  color: var(--text-color);
+  padding: 0.3rem 0rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.quali .item h3 {
+  color: var(--maincolor);
+  font-weight: 400;
+  padding: 0.3rem 0rem;
+}
+
+.quali .item .year {
+  font-size: 17px;
+  color: rgb(0, 255, 153);
+  padding-bottom: 0rem;
+  letter-spacing: 0.03em;
+}
+
+/* ==================================================------ Skills Section ------================================================== */
+
+.skills .content {
+  position: relative;
+  width: 100%;
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
+.skills .content .skill {
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+
+.skills .skill .skill-sec {
+  margin: 0.5rem 0rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background: #fcfcfc0a;
+}
+
+.skills .skill .skill-sec .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0rem 0rem 0rem;
+  justify-content: center;
+}
+
+.skills .skill .skill-sec .skill-list img {
+  width: 4rem;
+  margin: 1rem 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.skills .skill .skill-sec .skill-list img:hover {
+  transform: scale(1.2);
+}
+
+.skills .skill .skill-sec h1 {
+  text-align: center;
+  font-family: "Kaushan Script", cursive;
+  letter-spacing: 3px;
+  font-size: 2rem;
+}
+
+.skills .skill .skill-sec h1 i {
+  margin-right: 1rem;
+}
+
+/* <!-- =======================================================-----   Work Section ----============================================== --> */
+
+
+.work .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0em;
+  list-style: none;
+}
+
+.work .controls .buttons {
+  margin: 1rem 1.2rem;
+  padding: 0 0.4em;
+  font-family: "Fredoka One", cursive;
+  color: var(--text-color);
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.5s ease;
+}
+
+.work .controls .buttons.button-active,
+.work .controls .buttons:hover {
+  color: var(--maincolor);
+  transition: 1s ease;
+  border-color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
+.work .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+.work .image-container .image {
+  width: 320px;
+  position: relative;
+  margin: 2rem 1rem;
+  display: block;
+  align-items: flex-end;
+  height: 13rem;
+}
+
+.work .image-container .image img {
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  transition: 0.8s ease;
+  height: 13rem;
+  border-radius: 20px;
+}
+
+.content .card h3 {
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin: 0.5em;
+}
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: var(--maincolor);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.image .hover-items h3 {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.image .hover-items p {
+  color: var(--box-bg);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.image .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image .hover-items .icons .icon {
+  background-color: var(--body-bg);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+}
+.image .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0 1rem;
+}
+.image .hover-items .icons .icon:hover {
+  background-color: var(--text-color);
+}
+.image .hover-items .icons .icon:hover i {
+  color: var(--bgcolor);
+}
+
+.image:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =================================================------- Contact Section  ------=============================================== */
+
+.contact {
+  display: flex;
+  padding-top: 3.5rem;
+}
+.contact-container {
+  margin: 0 8rem 1rem 8rem;
+}
+.contact .left-contact {
+  flex: 2;
+}
+.contact .left-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--bgcolor2);
+}
+.contact .left-contact span {
+  color: var(--bgcolor2);
+}
+
+.contact .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+  color: var(--bgcolor2);
+}
+.contact .left-contact .contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact .left-contact .contact-info .contact-item p {
+  margin: 0.3rem 0 !important;
+  padding: 0 !important;
+}
+.contact .left-contact .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+.contact .left-contact .contact-info .contact-item .icon i {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--maincolor);
+}
+.contact .left-contact .contact-icon {
+  display: flex;
+  margin-top: 2rem;
+}
+.contact .left-contact .contact-icon a {
+  display: flex;
+  align-items: center;
+  color: var(--maincolor);
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.4rem;
+  transition: all 0.4s ease-in-out;
+}
+.contact .left-contact .contact-icon a:hover {
+  background-color: var(--maincolor);
+}
+.contact .left-contact .contact-icon a:hover i {
+  color: var(--bgcolor);
+}
+.contact .left-contact .contact-icon a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.contact .right-contact {
+  flex: 3;
+  margin-left: 3rem;
+}
+.contact .right-contact .input-control {
+  margin: 1.5rem 0;
+}
+.contact .right-contact .input-control input,
+.contact .right-contact .input-control textarea {
+  border-radius: 30px;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.8rem 1.1rem;
+  outline: none;
+  border: none;
+  background-color: var(--seccolor);
+  width: 100%;
+  color: rgb(255, 255, 255);
+  resize: none;
+}
+.contact .right-contact .i-c-2 {
+  display: flex;
+}
+.contact .right-contact .i-c-2 :last-child {
+  margin-left: 1.5rem;
+}
+
+/* ===========================================================------- Scroll button -----====================================== */
+.scrollToTop-btn {
+  z-index: 999;
+  position: fixed;
+  color: var(--text-color);
+  right: 0;
+  bottom: 15px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.scrollToTop-btn i {
+  font-size: 1.8rem;
+  background: var(--maincolor);
+  padding: 0.6rem 1rem;
+}
+
+.scrollToTop-btn:hover {
+  bottom: 20px;
+}
+
+.scrollToTop-btn.active {
+  right: 20px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ========================================================------ Footer Section ------============================================ */
+.footer {
+  background: var(--bgcolor);
+  color: #fff;
+  padding: 2em;
+  margin-top: 5rem;
+}
+.footer .policy {
+  text-align: center;
+  width: 100%;
+}
+.terms {
+  justify-content: right;
+  color: #5a5c5b;
+  margin: 1em 4em -1em 0em;
+  text-align: right;
+}
