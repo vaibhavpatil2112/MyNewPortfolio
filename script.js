@@ -87,9 +87,7 @@ for (let i = 0; i < numberOfColorBoxes; i++) {
   colorBox.classList.add("colorBox");
   Bganimation.append(colorBox);
 }
-
 // mode
-
 const themeToggle = document.getElementById("theme-toggle");
 const currentTheme = localStorage.getItem("theme");
 
@@ -102,11 +100,11 @@ themeToggle.addEventListener("click", function () {
 
   if (theme === "dark") {
     document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
+    localStorage.setItem("theme", "dark");
     document.body.style.background = "#ffe9e9";
   } else {
     document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
+    localStorage.setItem("theme", "light");
     document.body.style.background = "black";
   }
 });

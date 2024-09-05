@@ -112,7 +112,7 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: 0.5s ease;
-  background-color: #15151597;
+  background-color: #000000;
 }
 header .navigation {
   margin-right: -15rem;
@@ -393,6 +393,7 @@ header .navigation {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+/* -------------------------------------- */
 
 header.sticky {
   padding: 5px 50px;
