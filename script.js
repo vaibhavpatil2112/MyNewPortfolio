@@ -1,11 +1,8 @@
-
-
 //javascript for navigation bar effects on scroll
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 850);
 });
-
 
 //javascript for responsive navigation sidebar menu
 const menuBtn = document.querySelector(".hamburger-menu");
@@ -90,3 +87,26 @@ for (let i = 0; i < numberOfColorBoxes; i++) {
   colorBox.classList.add("colorBox");
   Bganimation.append(colorBox);
 }
+
+// mode
+
+const themeToggle = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+}
+
+themeToggle.addEventListener("click", function () {
+  let theme = document.documentElement.getAttribute("data-theme");
+
+  if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+    document.body.style.background = "#ffe9e9";
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+    document.body.style.background = "black";
+  }
+});

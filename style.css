@@ -10,7 +10,7 @@
 }
 
 :root {
-  --bgcolor: #000000;
+  --bgcolor: #000000cc;
   --bgcolor2: #fff;
   --seccolor: #5a5c5b;
   --maincolor: #01b3ff;
@@ -19,6 +19,12 @@
   --body-bg: #181616;
   --box-bg: #221f1f;
   --text-color: #ffffff;
+  --bganimation: black;
+  --bgback: #4b99e151;
+  --bgback12: #75d1f919;
+  --hover: black;
+  --skillsec: #fcfcfc0a;
+  --buttonhover: #01b3ff;
 }
 
 ::-webkit-scrollbar {
@@ -111,6 +117,8 @@ header {
 header .navigation {
   margin-right: -15rem;
 }
+/* ==============================================================------ theme-switcher section -----========================================== */
+
 .theme-switch {
   --toggle-size: 15px;
   --container-width: 5.625em;
@@ -131,6 +139,26 @@ header .navigation {
   --back-clouds-color: #aacadf;
   --transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
   --circle-transition: 0.3s cubic-bezier(0, -0.02, 0.35, 1.17);
+}
+
+/* Dark Mode */
+[data-theme="light"] {
+  --text-color: #e66a6a;
+  --bgcolor2: #e97b7bc9;
+  --bgcolor: #ffd1d1;
+  --bgcolor2: #050505;
+  --seccolor: #5a5c5b;
+  --maincolor: #f75c5c;
+  --second: #010101;
+  --third: #9f0707;
+  --body-bg: #181616;
+  --box-bg: #221f1f;
+  --bganimation: rgb(255, 222, 222);
+  --bgback: rgba(251, 127, 127, 0.474);
+  --bgback12: rgba(255, 136, 136, 0.368);
+  --hover: rgba(255, 255, 255, 0.708);
+  --skillsec: #ff9e9e67;
+  --buttonhover: #ff2828;
 }
 
 .theme-switch,
@@ -375,7 +403,7 @@ header.sticky .navigation a {
   color: black;
 }
 header.sticky .navigation a:hover {
-  color: #01b3ff;
+  color: var(--maincolor);
 }
 
 header .brand {
@@ -455,7 +483,6 @@ body {
 .title h2 span {
   text-align: center;
   font-family: "Poppins", sans-serif;
-
 }
 
 /*
@@ -471,7 +498,7 @@ body {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
-  background-color: #000000;
+  background-color: var(--bganimation);
   filter: saturate(2);
   overflow: hidden;
   z-index: -2000;
@@ -484,10 +511,10 @@ body {
   position: relative;
   margin: 2px;
   border-radius: 30%;
-  background: #000000;
+  background: var(--bganimation);
 }
 .colorBox:hover {
-  background: #4b99e151;
+  background: var(--bgback);
   transition-duration: 0s;
 }
 .backgroungAn {
@@ -496,7 +523,7 @@ body {
   left: 0;
   width: 100%;
   height: 60vh;
-  background: #75d1f919;
+  background: var(--bgback12);
   filter: blur(60px);
   animation: anim 6s linear infinite;
 }
@@ -1167,7 +1194,6 @@ ul {
   position: relative;
   width: 100%;
   color: var(--text-color);
-  margin-top: 20px;
 }
 
 .skills .content .skill {
@@ -1177,9 +1203,10 @@ ul {
 
 .skills .skill .skill-sec {
   margin: 0.5rem 0rem;
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 20px;
-  background: #fcfcfc0a;
+  background: var(--skillsec);
+  height: 170px;
 }
 
 .skills .skill .skill-sec .skill-list {
@@ -1193,6 +1220,7 @@ ul {
   width: 4rem;
   margin: 1rem 2rem;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 .skills .skill .skill-sec .skill-list img:hover {
   transform: scale(1.2);
@@ -1201,8 +1229,8 @@ ul {
 .skills .skill .skill-sec h1 {
   text-align: center;
   font-family: "Kaushan Script", cursive;
-  letter-spacing: 3px;
-  font-size: 2rem;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
 }
 
 .skills .skill .skill-sec h1 i {
@@ -1233,7 +1261,7 @@ ul {
 
 .work .controls .buttons.button-active,
 .work .controls .buttons:hover {
-  color: var(--maincolor);
+  color: var(--buttonhover);
   transition: 1s ease;
   border-color: var(--text-color);
   border-bottom: 2px solid var(--text-color);
@@ -1465,22 +1493,20 @@ ul {
   background: var(--maincolor);
   padding: 0.6rem 1rem;
   border-radius: 50%;
+  color: var(--bgcolor);
 }
 .scrollToTop-btn i:hover {
-  background-color: #048bd4;
+  background-color: var(--maincolor);
 }
-
 .scrollToTop-btn:hover {
   bottom: 20px;
-  /* color: #0217ff; */
+  color: var(--bgcolor);
 }
-
 .scrollToTop-btn.active {
   right: 20px;
   opacity: 1;
   pointer-events: auto;
 }
-
 .reveal {
   position: relative;
   transform: translateY(50px);
@@ -1496,13 +1522,15 @@ ul {
 /* ========================================================------ Footer Section ------============================================ */
 .footer {
   background: var(--bgcolor);
-  color: #fff;
+  color: var(--bgcolor2);
   padding: 2em;
   margin-top: 5rem;
 }
 .footer .policy {
   text-align: center;
   width: 100%;
+  font-weight: 700;
+
 }
 .terms {
   justify-content: right;
